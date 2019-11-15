@@ -1,4 +1,4 @@
-package imageviewer.model;
+package model;
 
 public class Image {
     private byte[] data;

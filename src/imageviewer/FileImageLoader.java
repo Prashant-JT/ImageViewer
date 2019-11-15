@@ -1,7 +1,7 @@
 package imageviewer;
 
-import imageviewer.model.Image;
-import imageviewer.model.persistence.ImageLoader;
+import model.Image;
+import persistence.ImageLoader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,6 +1,6 @@
 package imageviewer;
 
-import imageviewer.model.Image;
+import model.Image;
 
 public class ImageViewer {
 
