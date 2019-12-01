@@ -2,14 +2,17 @@ package persistence;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import model.Image;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import model.Image;
+import persistence.ImageLoader;
 
-public class FileImageLoader implements ImageLoader{
-    private final File[] files;
+public class FileImageLoader implements ImageLoader {
+    private File[] files;
     
     public FileImageLoader(String root) {
         this(new File(root));
@@ -18,14 +21,14 @@ public class FileImageLoader implements ImageLoader{
     public FileImageLoader(File root) {
         this.files = root.listFiles();
     }
-    
+
     @Override
     public Image load() {
         return imageAt(0);
     }
-
+    
     private Image imageAt(int i) {
-       return new Image() {
+        return new Image() {
             @Override
             public String getName() {
                 return file().getName();
@@ -60,7 +63,7 @@ public class FileImageLoader implements ImageLoader{
 
         };
     }
-
+    
     private byte[] dataOf(File file) throws IOException {
         byte[] buffer = new byte[4096];
         ByteArrayOutputStream result = new ByteArrayOutputStream();
@@ -70,10 +73,10 @@ public class FileImageLoader implements ImageLoader{
                 int read = is.read(buffer);
                 if (read < 0) break;
                 os.write(buffer, 0, read);
-            }
+            };
             os.flush();
             return result.toByteArray();
         }
     }
-       
+    
 }
