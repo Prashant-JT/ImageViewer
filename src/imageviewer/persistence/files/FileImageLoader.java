@@ -1,4 +1,4 @@
-package persistence;
+package imageviewer.persistence.files;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -6,10 +6,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import model.Image;
-import persistence.ImageLoader;
+import imageviewer.model.Image;
+import imageviewer.persistence.ImageLoader;
 
 public class FileImageLoader implements ImageLoader {
     private File[] files;

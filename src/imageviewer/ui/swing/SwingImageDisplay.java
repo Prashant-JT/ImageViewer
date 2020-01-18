@@ -1,14 +1,14 @@
-package imageviewer;
+package imageviewer.ui.swing;
 
+import imageviewer.ui.ImageDisplay;
 import java.awt.Graphics;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
-import model.Image;
+import imageviewer.model.Image;
 
 public class SwingImageDisplay extends JPanel implements ImageDisplay {
-
     private Image image;
 
     @Override

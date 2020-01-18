@@ -1,7 +1,9 @@
-package imageviewer;
-
-import model.Image;
-import persistence.FileImageLoader;
+import imageviewer.ui.swing.SwingImageDisplay;
+import imageviewer.control.NextImageCommand;
+import imageviewer.control.PrevImageCommand;
+import imageviewer.control.ExitCommand;
+import imageviewer.model.Image;
+import imageviewer.persistence.files.FileImageLoader;
 
 public class Main {
     

@@ -1,9 +1,11 @@
-package imageviewer;
+package imageviewer.ui;
 
-import model.Image;
+import imageviewer.model.Image;
 
 public interface ImageDisplay {
+    
     public void display(Image image);
+    
     public Image image();
     
 }

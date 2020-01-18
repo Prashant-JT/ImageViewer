@@ -1,7 +1,8 @@
-package imageviewer;
+package imageviewer.control;
+
+import imageviewer.ui.ImageDisplay;
 
 public class NextImageCommand implements Command {
-
     private final ImageDisplay imageDisplay;
 
     public NextImageCommand(ImageDisplay imageDisplay) {

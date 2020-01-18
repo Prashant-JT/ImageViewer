@@ -1,4 +1,4 @@
-package imageviewer;
+package imageviewer.control;
 
 public interface Command {
     
