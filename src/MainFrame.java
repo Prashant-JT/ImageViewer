@@ -31,7 +31,6 @@ public class MainFrame extends JFrame {
 
     public void add(String id, Command command) {
         commands.put(id, command);
-        System.out.println(id);
     }
 
     private JPanel toolBar() {
